@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Bonitaa-Salem/static/css/main.fbcf971e.css",
-    "main.js": "/Bonitaa-Salem/static/js/main.49b7866c.js",
+    "main.js": "/Bonitaa-Salem/static/js/main.aadc4a79.js",
     "static/media/a13.avif": "/Bonitaa-Salem/static/media/a13.1b34bf110b95d74adbce.avif",
     "static/media/a7.jpg": "/Bonitaa-Salem/static/media/a7.ed1825430e09baf258a7.jpg",
     "static/media/a5.jpg": "/Bonitaa-Salem/static/media/a5.73745788d2250a55f923.jpg",
@@ -33,10 +33,10 @@
     "static/media/slick.woff": "/Bonitaa-Salem/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Bonitaa-Salem/index.html",
     "main.fbcf971e.css.map": "/Bonitaa-Salem/static/css/main.fbcf971e.css.map",
-    "main.49b7866c.js.map": "/Bonitaa-Salem/static/js/main.49b7866c.js.map"
+    "main.aadc4a79.js.map": "/Bonitaa-Salem/static/js/main.aadc4a79.js.map"
   },
   "entrypoints": [
     "static/css/main.fbcf971e.css",
-    "static/js/main.49b7866c.js"
+    "static/js/main.aadc4a79.js"
   ]
 }
