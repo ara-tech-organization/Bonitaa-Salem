@@ -25,6 +25,51 @@ code {
 }
 @media (min-width: 350px) {
     .css-1jl5h6g {
-        height: 50px !important;
+        height: 0px !important;
     }
 }
+@media (min-width: 350px) {
+   .css-mqzfk0 {
+        padding-left: 0px !important;
+    }
+}
+
+@media (min-width: 1000px) {
+ .css-jklwz4-MuiTypography-root {
+        margin: 50px!important;
+    }
+  }
+@media (min-width: 900px) {
+    .css-slfjh0-MuiPaper-root {
+        width: 50%!important;
+    }
+}
+
+ 
+@media (min-width: 300px) {
+   .css-13pi5aw {
+        margin-top:30px!important;
+    }
+}
+@media (min-width: 900px) {
+    .css-slfjh0-MuiPaper-root {
+        margin-top: 10% !important;
+    }
+}
+@media (min-width: 900px) {
+    .css-slfjh0-MuiPaper-root {
+        margin-top: 0% !important;
+    }
+}
+@media (min-width: 1000px) {
+   .css-13pi5aw {
+       min-height: 100vh !important;
+    }
+}
+@media (min-width: 900px) {
+  .css-gw6lgh {
+       margin-top: 30px !important;
+    }
+}
+
+

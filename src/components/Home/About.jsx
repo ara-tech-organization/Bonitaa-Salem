@@ -58,7 +58,7 @@ const About = () => {
               
             }}
           >
-            Bonita - Expert Skin & Hair Care Clinic In Coimbatore
+            Bonita - Expert Skin & Hair Care Clinic In Salem
           </Typography>
 
           <Typography

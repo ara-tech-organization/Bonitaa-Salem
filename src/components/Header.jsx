@@ -69,11 +69,11 @@ function Header() {
             data-aos="fade-up"
             sx={clickableStyle}
             onClick={() =>
-              (window.location.href = "mailto:customercare@bonitaa.co.in")
+              (window.location.href = "mailto:bonitaasalem@gmail.com")
             }
           >
             <EmailIcon fontSize="small" />
-            <Typography variant="body2">customercare@bonitaa.co.in</Typography>
+            <Typography variant="body2">bonitaasalem@gmail.com</Typography>
           </Box>
 
           <Box
@@ -82,7 +82,7 @@ function Header() {
             sx={clickableStyle}
             onClick={() =>
               window.open(
-                "https://www.google.com/maps/search/?api=1&query=Jaya+Towers,+S+2,+Second+Floor,+East+Second+Street,+Pudukkottai",
+                "https://www.google.com/maps/search/?api=1&query=Jaya+Towers,+S+2,+Second+Floor,+East+Second+Street,",
                 "_blank"
               )
             }
@@ -98,15 +98,20 @@ function Header() {
         <Box data-aos="fade-up" sx={{ display: "flex", gap: 1 }}>
           <IconButton
             sx={{ color: "black", "&:hover": { color: "#D4AF37" } }}
-            onClick={() => window.open("https://www.facebook.com", "_blank")}
+            component="a"
+            href="https://www.facebook.com/salemskinandhairclinic"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FacebookIcon />
           </IconButton>
+
           <IconButton
             sx={{ color: "black", "&:hover": { color: "#D4AF37" } }}
-            onClick={() =>
-              window.open("https://www.instagram.com", "_blank")
-            }
+            component="a"
+            href="https://www.instagram.com/bonitaa_skin_hair_salem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <InstagramIcon />
           </IconButton>

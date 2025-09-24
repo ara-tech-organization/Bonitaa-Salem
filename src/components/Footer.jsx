@@ -101,20 +101,32 @@ export default function FooterSplit() {
 
   {/* Contact */}
   <Grid size={{ xs: 12, md: 4, lg: 2 }} ml={5}>
-    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
-      Contact
-    </Typography>
+    <Typography
+  variant="h6"
+  sx={{
+    fontWeight: "bold",
+    mb: 2,
+    textDecoration: "underline",   // underline
+    textDecorationThickness: "2px", // thickness control (optional)
+    textUnderlineOffset: "4px",    // spacing from text (optional)
+  }}
+>
+  Contact
+</Typography>
 
     {/* Clickable address (Google Maps) */}
-    <Typography
-      component="a"
-      href="https://maps.google.com/?q=Jaya+Towers,+S+2,+Second+Floor,+East+Second+Street,+Pudukkottai+-+622001"
-      target="_blank"
-      rel="noopener noreferrer"
-      sx={{ display: "block", ...linkStyle }}
-    >
-      LIC Subarayan Complex,Second<br/> Floor  Hotel Vasantham Street, LIC Colony,Near New <br/> busstand Reliance Trends, Salem - 636004
-    </Typography>
+   <Typography
+  component="a"
+  href="https://www.google.com/maps/search/?api=1&query=LIC+Subarayan+Complex,+Second+Floor,+Hotel+Vasantham+Street,+LIC+Colony,+Near+New+busstand+Reliance+Trends,+Salem+-+636004"
+  target="_blank"
+  rel="noopener noreferrer"
+  sx={{ display: "block", ...linkStyle }}
+>
+  LIC Subarayan Complex, Second <br />
+  Floor Hotel Vasantham Street, LIC Colony, Near New <br />
+  busstand Reliance Trends, Salem - 636004
+</Typography>
+
 
     {/* Phone numbers */}
     <Typography
@@ -124,13 +136,7 @@ export default function FooterSplit() {
     >
      +91 93637 09090
     </Typography>
-    {/* <Typography
-      component="a"
-      href="tel:+918807122992"
-      sx={{ display: "block", ...linkStyle }}
-    >
-      +91 88071 22992
-    </Typography> */}
+    
 
     {/* Email */}
     <Typography
@@ -138,13 +144,17 @@ export default function FooterSplit() {
       href="mailto:customercare@bonitaa.co.in"
       sx={{ mt: 1, display: "block", ...linkStyle }}
     >
-      customercare@bonitaa.co.in
+      bonitaasalem@gmail.com
     </Typography>
   </Grid>
 
   {/* Quick Links */}
    <Grid size={{ xs: 12, md: 3, lg: 2 }} ml={{ lg: 7 }}>
-      <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+      <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2,
+         textDecoration: "underline",   // underline
+    textDecorationThickness: "2px", // thickness control (optional)
+    textUnderlineOffset: "4px",    // spacing from text (optional)
+       }}>
         Links
       </Typography>
 
@@ -215,7 +225,11 @@ export default function FooterSplit() {
 
   {/* Social */}
   <Grid size={{ xs: 12, md: 4, lg: 2 }}>
-    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 ,
+ textDecoration: "underline",   // underline
+    textDecorationThickness: "2px", // thickness control (optional)
+    textUnderlineOffset: "4px",    // spacing from text (optional)
+    }}>
       Follow Us
     </Typography>
 
@@ -228,7 +242,7 @@ export default function FooterSplit() {
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
-        <Box component={Link} href="#" sx={linkStyle}>
+        <Box component={Link} href="https://www.facebook.com/salemskinandhairclinic" sx={linkStyle}>
           <Facebook sx={{ mr: 1, verticalAlign: "middle" }} />
           Facebook
         </Box>
@@ -238,7 +252,7 @@ export default function FooterSplit() {
         </Box>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <Box component={Link} href="#" sx={linkStyle}>
+        <Box component={Link} href="https://www.instagram.com/bonitaa_skin_hair_salem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" sx={linkStyle}>
           <Instagram sx={{ mr: 1, verticalAlign: "middle" }} />
           Instagram
         </Box>
@@ -253,11 +267,11 @@ export default function FooterSplit() {
         gap: 1,
       }}
     >
-      <Box component={Link} href="#" sx={linkStyle}>
+      <Box component={Link} href="https://www.facebook.com/salemskinandhairclinic" sx={linkStyle}>
         <Facebook sx={{ mr: 1, verticalAlign: "middle" }} />
         Facebook
       </Box>
-      <Box component={Link} href="#" sx={linkStyle}>
+      <Box component={Link} href="https://www.instagram.com/bonitaa_skin_hair_salem?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" sx={linkStyle}>
         <Instagram sx={{ mr: 1, verticalAlign: "middle" }} />
         Instagram
       </Box>
@@ -268,25 +282,30 @@ export default function FooterSplit() {
     </Box>
   </Grid>
 
-  {/* Map */}
+{/* Map */}
   <Grid size={{ xs: 12, md: 6, lg: 3 }}>
-    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2 }}>
+    <Typography variant="h6" sx={{ fontWeight: "bold", mb: 2,
+       textDecoration: "underline",   // underline
+    textDecorationThickness: "2px", // thickness control (optional)
+    textUnderlineOffset: "4px",    // spacing from text (optional)
+     }}>
       Location
     </Typography>
-  <iframe
-  title="Bonitaa Skin and Hair Care - Google Map"
-  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3924.463876271187!2d78.824014!3d10.384683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00790e6a71da2f%3A0xe880e8d244cf23da!2sBonitaa%20Skin%20and%20Hair%20Care!5e0!3m2!1sen!2sin!4v1757332718439!5m2!1sen!2sin"
-  width="80%"
+   <iframe
+  title="Bonitaa Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.0168084829843!2d78.13938027481892!3d11.669646388538704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1a6402d8f9f%3A0x4a0383210c580c5a!2sBONITAA%20SKIN%20AND%20HAIR%20CARE!5e1!3m2!1sen!2sin!4v1757504933133!5m2!1sen!2sin"
+  width="70%"   // responsive
   height="200"
   style={{
     border: 0,
-    borderRadius: 8,
+    borderRadius: "8px",
   }}
-  allowFullScreen=""
+  allowFullScreen
   loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
 />
 
-  </Grid>
+  </Grid>
 </Grid>
 
 
@@ -313,23 +332,7 @@ export default function FooterSplit() {
         <Typography variant="body2" sx={{ color: "#aaa", mb: 1 }}>
           © 2025 Bonitaa Skin & Hair Care | All Rights Reserved
         </Typography>
-        <Box>
-          {policies.map((policy, idx) => (
-            <Link
-              key={idx}
-              href="#"
-              color="inherit"
-              underline="hover"
-              sx={{
-                mx: 1,
-                transition: "color 0.3s",
-                "&:hover, &:active": { color: "#D4AF37" },
-              }}
-            >
-              {policy}
-            </Link>
-          ))}
-        </Box>
+       
       </Box>
     </Box>
   );

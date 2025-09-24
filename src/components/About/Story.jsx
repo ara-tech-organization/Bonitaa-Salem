@@ -8,25 +8,25 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 
 const steps = [
   {
-    icon: <ThumbUpAltIcon sx={{ fontSize: 36, color: "#fdd835" }} />,
+    icon: <ThumbUpAltIcon sx={{ fontSize: 36, color: "#fdd835" }} data-aos="fade-up"/>,
     title: "Visible, Lasting Results",
     description:
       "Clients see real improvements – healthier skin, stronger hair, and renewed confidence.",
   },
   {
-    icon: <BuildIcon sx={{ fontSize: 36, color: "#fdd835" }} />,
+    icon: <BuildIcon sx={{ fontSize: 36, color: "#fdd835" }}data-aos="fade-up" />,
     title: "Advanced, Safe Technology",
     description:
       "We use the latest proven tools. Every treatment is safe, effective, and handled by experts.",
   },
   {
-    icon: <LightbulbIcon sx={{ fontSize: 36, color: "#fdd835" }} />,
+    icon: <LightbulbIcon sx={{ fontSize: 36, color: "#fdd835" }} data-aos="fade-up"/>,
     title: "Personalized Care Plans",
     description:
       "We listen first. Then create a care plan tailored to your skin, hair, and lifestyle.",
   },
   {
-    icon: <HandshakeIcon sx={{ fontSize: 36, color: "#fdd835" }} />,
+    icon: <HandshakeIcon sx={{ fontSize: 36, color: "#fdd835" }} data-aos="fade-up"/>,
     title: "Compassionate Expert Team",
     description:
       "From the first visit to the last, our team supports you with care and honest guidance.",
@@ -46,12 +46,12 @@ const HorizontalSteps = () => {
     >
       {/* Heading */}
       <Box sx={{ mb: 8 }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "#fdd835" }}>
+        <Typography variant="h6" sx={{ fontWeight: "bold", color: "#fdd835" }}data-aos="fade-up">
           ◆ WHY CHOOSE US?
         </Typography>
         <Typography
           variant="h4"
-          sx={{ fontWeight: "bold", mt: 1, color: "#fff" }}
+          sx={{ fontWeight: "bold", mt: 1, color: "#fff" }}data-aos="fade-up"
         >
           Our Proven Process
         </Typography>
@@ -96,18 +96,18 @@ const HorizontalSteps = () => {
                     transform: "scale(1.1)",
                     boxShadow: "0 0 20px rgba(199,151,61,0.6)",
                   },
-                }}
+                }}data-aos="fade-up"
               >
                 {step.icon}
               </Box>
 
               {/* Title & Description */}
-              <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
+              <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}data-aos="fade-up">
                 {step.title}
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#aaa", maxWidth: 250, mx: "auto" }}
+                sx={{ color: "#aaa", maxWidth: 250, mx: "auto" }}data-aos="fade-up"
               >
                 {step.description}
               </Typography>
@@ -125,7 +125,7 @@ const HorizontalSteps = () => {
                   height: "2px",
                   backgroundColor: "#444",
                   zIndex: -1,
-                }}
+                }}data-aos="fade-up"
               />
             )}
           </motion.div>

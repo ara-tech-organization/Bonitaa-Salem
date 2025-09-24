@@ -129,7 +129,7 @@ const ServicesSection = () => {
       <Typography
         variant="h4"
         fontWeight={700}
-        marginTop={0}
+        marginTop={3}
         sx={{ fontSize: { xs: "28px", sm: "34px", lg: "38px" }, mb: 3  }}
       
       >
@@ -172,7 +172,7 @@ const ServicesSection = () => {
               "&:hover": {
                 backgroundColor:
                   activeService.title === service.title
-                    ? "#fdd835"
+                    ? "#000000ff"
                     : "#e0e0e0",
               },
             }}

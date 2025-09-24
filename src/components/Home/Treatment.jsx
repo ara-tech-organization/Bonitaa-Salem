@@ -1,191 +1,210 @@
-import React from "react";
-import { Box, Grid, Typography, Card, CardContent, CardMedia, Button, useMediaQuery, useTheme } from "@mui/material";
+import React, { useEffect } from "react";
+import {
+  Box,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Sample images
+// 👉 Logo imports
+import SkinLogo from "../asserts/logo1.svg"
+import LaserLogo from "../asserts/logo2.svg"
+import WhiteningLogo from "../asserts/logo3.svg"
+import HairLogo from "../asserts/logo4.svg"
+import MassageLogo from "../asserts/logo5.svg"
+import SkinHairLogo from"../asserts/logo6.svg"
+
+
+// 👉 Image imports
 import img1 from "../asserts/a1.jpg";
 import img2 from "../asserts/a2.jpg";
 import img3 from "../asserts/a3.jpg";
+
 import img4 from "../asserts/a4.jpg";
 import img5 from "../asserts/a5.jpg";
 import img6 from "../asserts/a6.jpg";
 
-const treatments = [
+// 👉 Data
+const cardData = [
   {
-    title: "SHI Transplant",
-    desc: "We offer Simultaneous Harvesting and Implantation (SHI) Treatment. It is a modern hair transplant technique.",
-    img: img1,
+    id: 1,
+    image: img1,
+    logo: SkinLogo,
+    treatment: "Skin PRP Treatment",
+    description:
+      "Want glowing skin in salem? At Bonitaa Skin & Hair Care Clinic, we offer safe PRP therapy that uses your body’s natural healing power. Fade scars, smooth fine lines, and enjoy youthful, healthy skin with visible results. Choose Bonitaa for trusted dermatological care and confidence that shines.",
   },
   {
-    title: "PRP Treatment",
-    desc: "Platelet-rich plasma facials are a noninvasive, FDA-approved anti-aging procedure.",
-    img: img2,
+    id: 2,
+    image: img2,
+    logo: LaserLogo,
+    treatment: "Q-Switch Treatment",
+    description:
+      "Regain your confidence with radiant skin at Bonitaa Skin & Hair Care Clinic, salem. Our FDA-approved Q-switch Laser treats pigmentation, acne scars, aging signs, and even unwanted tattoos. With expert dermatologists customizing each session, the laser gently clears problem areas without harming skin. Reveal smoother, youthful skin—book your appointment today and begin your glow journey.",
   },
   {
-    title: "Eyebrow Transplantation",
-    desc: "Bonitaa Hair and Skin Care Centre provides high-quality thinning or damaged brows treatments with quick recovery.",
-    img: img3,
+    id: 3,
+    image: img3,
+    logo: WhiteningLogo,
+    treatment: "Skin Lightening Treatment",
+    description:
+      "At Bonitaa Skin & Hair Care, Salem, we help you feel confident in your skin with safe, proven treatments. Our team listens to your needs and tailors care to your skin type, ensuring comfort at every step. We focus on natural improvements that enhance your look and well-being, delivering lasting results that bring confidence and smiles.",
   },
   {
-    title: "Hair Fall Treatment",
-    desc: "We offer Follicular Unit Excision and QR678, a patented hair regrowth treatment for targeted hair loss.",
-    img: img4,
+    id: 4,
+    image: img4,
+    logo: HairLogo,
+    treatment: "Laser Hair Removal",
+    description:
+      "Laser Hair Removal at Bonitaa Skin & Hair Care, Salem, gives you smooth, hair-free skin without shaving, waxing, or threading. Using FDA-approved lasers safe for all skin types, it reduces hair growth, improves texture, and prevents irritation or ingrown hairs. Suitable for both men and women, it offers lasting comfort and confidence.",
   },
   {
-    title: "Skin Lightening Treatment",
-    desc: "We offer skin-lightening treatments to improve skin tone and address pigmentation concerns, blemishes.",
-    img: img5,
+    id: 5,
+    image: img5,
+    logo: MassageLogo,
+    treatment: "Exosome GFC Skin Treatment",
+    description:
+      "Exosome GFC Therapy is an advanced skin rejuvenation treatment that repairs and renews skin from within. Using lab-made exosomes rich in growth factors, it boosts cell healing, hydration, and clarity while reducing fine lines. Gentle, safe, and with no downtime, it delivers smoother, healthier skin in just a few sessions.",
   },
   {
-    title: "Hair Transplantation",
-    desc: "Bonitaa Hair Care clinic offers advanced Bio-Fue hair transplants, integrating cell-based growth for realistic results.",
-    img: img6,
+    id: 6,
+    image: img6,
+    logo: SkinHairLogo,
+    treatment: "Hair Fall Treatment",
+    description:
+      "Bonitaa Skin & Hair Care, Salem, helps restore confidence with expert hair loss treatments like PRP, QR678, Bio-FUE, and Sapphire FUE. We diagnose the cause, not just symptoms, and serve patients from Salem and nearby areas.",
   },
 ];
 
-const TreatmentsSection = () => {
+const CardGrid = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // 👉 detect xs & sm
 
-  // Slider settings for mobile
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  // 👉 Slider settings
   const sliderSettings = {
     dots: true,
     infinite: false,
-    speed: 500,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: false,
   };
 
+  // 👉 Card Component (reuse in grid + slider)
+  const renderCard = (card) => (
+    <Card
+      key={card.id}
+      sx={{
+        borderRadius: 2,
+        overflow: "hidden",
+        boxShadow: 4,
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        transition: "0.3s",
+        "&:hover": { transform: "translateY(-8px)", boxShadow: 6 },
+      }}
+    >
+      {/* Image */}
+      <Box sx={{ position: "relative" }}>
+        <img
+          src={card.image}
+          alt={card.treatment}
+          style={{
+            width: "100%",
+            height: "280px",
+            objectFit: "cover",
+            borderTopLeftRadius: "8px",
+            borderTopRightRadius: "8px",
+          }}
+        />
+
+        {/* Logo */}
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "-30px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            backgroundColor: "#FFD700",
+            borderRadius: "50%",
+            width: "70px",
+            height: "70px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: 2,
+          }}
+        >
+          <Box
+            component="img"
+            src={card.logo}
+            alt="Logo"
+            sx={{ height: 40, width: 40 }}
+          />
+        </Box>
+      </Box>
+
+      {/* Content */}
+      <CardContent sx={{ mt: 4, flexGrow: 1 }}>
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", mb: 1, color: "#111" }}
+        >
+          {card.treatment}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {card.description}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+
   return (
-    <Box sx={{ py: 8, px: { xs: 2, md: 8 }, bgcolor: "#fafafa" }}>
-      {/* Heading */}
-      <Typography
-        variant="h6"
-        align="center"
-        data-aos="fade-up"
-        sx={{ fontWeight: "bold", color: "#FFD700", mb: 1 }}
-      >
-        OUR TREATMENTS
-      </Typography>
-      <Typography
-        variant="h4"
-        align="center"
-        data-aos="fade-up"
-        sx={{ fontWeight: "bold", mb: 6 }}
-      >
-        Best Dermatologists In Coimbatore <br /> For Skin & Hair Care
-      </Typography>
+    <Box sx={{ py: 6, px: { xs: 2, md: 8 }, bgcolor: "#fafafa" }}>
+      {/* Title */}
+      <Box sx={{ textAlign: "center", mb: 6 }} data-aos="fade-up">
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#FFD700", mb: 1 }}
+        >
+          OUR TREATMENTS
+        </Typography>
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "bold", mb: 3 }}
+        >
+          Customized Skin & Hair Care <br /> For Women & Men in salem
+        </Typography>
+      </Box>
 
-      {/* Desktop Grid */}
-      {!isMobile && (
+      {/* 👉 Desktop Grid / Mobile Slider */}
+      {!isMobile ? (
         <Grid container spacing={4} data-aos="fade-up">
-          {treatments.map((t, i) => (
-            <Grid size={{xs:12,sm:6,md:4}} key={i}>
-              <Box
-                sx={{
-                 
-                  borderRadius: 3,
-                  p: 1,
-
-                  
-                }}
-              >
-                <Card
-                  sx={{
-                    border: "2px solid black",
-                    borderRadius: 2,
-                    boxShadow: 4,
-                    transition: "0.3s",
-                    "&:hover": { transform: "translateY(-8px)", boxShadow: 6 ,},
-                    
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="220"
-                    image={t.img}
-                    alt={t.title}
-                    sx={{ borderTopLeftRadius: 8, borderTopRightRadius: 8 }}data-aos="fade-up"
-                  />
-                  <CardContent>
-                    <Typography
-                      variant="h6"
-                      sx={{ fontWeight: "bold", mb: 1, color: "#111" ,textAlign:"center"}}data-aos="fade-up"
-                    >
-                      {t.title}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{ color: "text.secondary", mb: 2 }}data-aos="fade-up"
-                    >
-                      {t.desc}
-                    </Typography>
-                    
-                  </CardContent>
-                </Card>
-              </Box>
+          {cardData.map((card) => (
+            <Grid key={card.id} size={{ xs: 12, sm: 6, md: 4 }}>
+              {renderCard(card)}
             </Grid>
           ))}
         </Grid>
-      )}
-
-      {/* Mobile Slider */}
-      {isMobile && (
+      ) : (
         <Slider {...sliderSettings}>
-          {treatments.map((t, i) => (
-            <Box key={i} sx={{ px: 1 }}>
-              <Box
-                sx={{
-                  border: "2px solid #FFD700",
-                  borderRadius: 3,
-                  p: 1,
-                }}
-              >
-                <Card
-                  sx={{
-                    border: "2px solid black",
-                    borderRadius: 2,
-                    boxShadow: 4,
-                    transition: "0.3s",
-                    "&:hover": { transform: "translateY(-8px)", boxShadow: 6 },
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={t.img}
-                    alt={t.title}
-                    sx={{ borderTopLeftRadius: 8, borderTopRightRadius: 8 }}
-                  />
-                  <CardContent>
-                    <Typography
-                      variant="h6"
-                      sx={{ fontWeight: "bold", mb: 1, color: "#111" }}
-                    >
-                      {t.title}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{ color: "text.secondary", mb: 2 }}
-                    >
-                      {t.desc}
-                    </Typography>
-                    <Button
-                      variant="contained"
-                      sx={{
-                        bgcolor: "#FFD700",
-                        color: "#111",
-                        fontWeight: "bold",
-                        borderRadius: "50px",
-                        px: 3,
-                        "&:hover": { bgcolor: "#111", color: "#fff" },
-                      }}
-                    >
-                      View More →
-                    </Button>
-                  </CardContent>
-                </Card>
-              </Box>
+          {cardData.map((card) => (
+            <Box key={card.id} sx={{ px: 1 }}>
+              {renderCard(card)}
             </Box>
           ))}
         </Slider>
@@ -194,4 +213,4 @@ const TreatmentsSection = () => {
   );
 };
 
-export default TreatmentsSection;
+export default CardGrid;

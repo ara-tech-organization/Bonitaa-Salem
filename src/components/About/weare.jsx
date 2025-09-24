@@ -96,6 +96,7 @@ const WhoWeAreSplit = () => {
                     borderRadius: "20px",
                     objectFit: "cover", // crop + fit all images equally
                     boxShadow: "0px 8px 30px rgba(0,0,0,0.15)",
+                    
                   }}
                 />
               </motion.div>
@@ -107,6 +108,7 @@ const WhoWeAreSplit = () => {
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
+                color=" black"
               >
                 <Paper
                   sx={{
@@ -132,7 +134,7 @@ const WhoWeAreSplit = () => {
   {section.title}
 </Typography>
 
-                  <Typography variant="body1" sx={{ color: "text.secondary" }} data-aos="fade-up">
+                  <Typography variant="body1" sx={{ color: "#000" }} data-aos="fade-up">
                     {section.description}
                   </Typography>
                 </Paper>

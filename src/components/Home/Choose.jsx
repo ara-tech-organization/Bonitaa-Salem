@@ -26,11 +26,14 @@ const StatsSection = () => {
   return (
     <Box
       sx={{
-        py: 15,
+        // py: 5,
         px: 3,
         bgcolor: "linear-gradient(135deg, #f8f9fa, #e3f2fd)",
         textAlign: "center",
-        ml:4
+        ml:4,
+        mb:10,
+        mt:5
+       
         
       }}data-aos="fade-up"
     >
@@ -69,9 +72,10 @@ const StatsSection = () => {
               elevation={4}
               sx={{
                 p: 4,
+                // mt:2,
                 textAlign: "center",
                 borderRadius: 3,
-                height: "130%",
+                height: "100%",
                 width:"80%",
                 background: "linear-gradient(135deg, #ffffff, #f1f8ff)",
                 boxShadow: "0 6px 20px rgba(0,0,0,0.1)",

@@ -21,7 +21,8 @@ const About = () => {
     backgroundImage: `url(${img1})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    // mt: -10, // negative margin if needed
+    
+    // mt: -1, // negative margin if needed
     color: "#fff",
     py: 8,
     px: { xs: 2, md: 6, lg: 10 },
@@ -38,8 +39,9 @@ const About = () => {
       height: "100%", // overlay covers entire box
       bgcolor: "rgba(0,0,0,0.6)",
       zIndex: 1,
+      
     },
-  }}
+  }}data-aos="fade-up"
 >
 
       <Grid
@@ -47,7 +49,7 @@ const About = () => {
         spacing={4}
         justifyContent="center"
       
-        sx={{ position: "relative", zIndex: 2}}
+        sx={{ position: "relative", zIndex: 2}}data-aos="fade-up"
       >
        <Grid size={{xs:12}} >
           <Typography
@@ -57,14 +59,14 @@ const About = () => {
               mb: 2,
               fontFamily: "'Playfair Display', serif",
               color:" #fdd835"
-            }}
+            }}data-aos="fade-up"
           >
-            Bonita - Expert Skin & Hair Care Clinic In Coimbatore
+            Bonita - Expert Skin & Hair Care Clinic In salem
           </Typography>
 
           <Typography
             variant="body1"
-            sx={{ lineHeight: 1.8, color: "#ddd", mb: 3 }}
+            sx={{ lineHeight: 1.8, color: "#ddd", mb: 3 }}data-aos="fade-up"
           >
             Bonitaa Skin & Hair Care, your premier destination for all your skin
             and hair needs across Coimbatore, Chennai, Madurai, and Trichy.
@@ -75,7 +77,7 @@ const About = () => {
 
           <Typography
             variant="body1"
-            sx={{ lineHeight: 1.8, color: "#ddd", mb: 5 }}
+            sx={{ lineHeight: 1.8, color: "#ddd", mb: 5 }}data-aos="fade-up"
           >
             With over 12 years of industry experience, Bonitaa has set a
             benchmark synonymous with the highest standards of quality and care.
@@ -95,11 +97,11 @@ const About = () => {
               background: "#fff",
               color: "#000",
               textAlign: "left",
-            }}
+            }}data-aos="fade-up"
           >
             <CardContent>
               <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                <VisibilityIcon sx={{ color: "#fdd835", mr: 1 }} />
+                <VisibilityIcon sx={{ color: "#fdd835", mr: 1 }}data-aos="fade-up" />
                 <Typography variant="h6" fontWeight="bold">
                   Vision
                 </Typography>
@@ -114,7 +116,7 @@ const About = () => {
         </Grid>
 
         {/* Mission Card */}
-        <Grid size={{xs:12,md:6}} >
+        <Grid size={{xs:12,md:6}}data-aos="fade-up" >
           <Card
             sx={{
               borderRadius: 3,
@@ -126,7 +128,7 @@ const About = () => {
             }}
           >
             <CardContent>
-              <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}data-aos="fade-up">
                 <FlagIcon sx={{ color: "#fdd835", mr: 1 }} />
                 <Typography variant="h6" fontWeight="bold">
                   Mission

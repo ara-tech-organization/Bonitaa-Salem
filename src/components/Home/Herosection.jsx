@@ -11,6 +11,7 @@ import { Facebook, Instagram, YouTube, Twitter } from "@mui/icons-material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 import img1 from "../asserts/a11.jpg"
 import img2 from"../asserts/a12.jpg"
@@ -38,7 +39,7 @@ const Herosection = () => {
         py: { xs: 4, md: 8 },
         display: "flex",
         alignItems: "center",
-        mt:-5
+        mt:2
       }}
     >
       <Grid container spacing={4} alignItems="center">
@@ -48,6 +49,7 @@ const Herosection = () => {
             variant="subtitle1"
             sx={{ color: "#fdd835", mb: 2, fontWeight: 500 ,}}
              data-aos="fade-up"
+             textAlign={{xs:'center',md:'left'}}
           >
          Clinic in Salem
           </Typography>
@@ -55,11 +57,12 @@ const Herosection = () => {
           <Typography
             variant="h3"
               data-aos="fade-up"
+              textAlign={{xs:'center',md:'left'}}
             sx={{
               fontWeight: "bold",
               lineHeight: 1.2,
               mb: 2,
-              
+               
             }}
           >
            Best Aesthetic Skin & <br />
@@ -69,6 +72,7 @@ const Herosection = () => {
           <Typography
             variant="body1"
               data-aos="fade-up"
+              textAlign={{xs:'center',md:'left'}}
             sx={{ color: "#aaa", mb: 4, maxWidth: "500px" }}
           >
             Giving you healthy skin, resilient hair, and strong confidence.
@@ -76,24 +80,32 @@ const Herosection = () => {
 
           </Typography>
 
-          <Button
-            variant="outlined"
-            sx={{
-              borderColor: "#fdd835",
-              color: "#fdd835",
-              px: 3,
-              py: 1,
-              fontWeight: "bold",
-              borderRadius: "50px",
-              "&:hover": {
-                bgcolor: "#fdd835",
-                color: "#111",
-                
-              },
-            }} data-aos="fade-up"
-          >
-            Book appointment →
-          </Button>
+        <Box 
+  sx={{ 
+    textAlign: { xs: "center", md: "left" } 
+  }}
+>
+  <Button
+              variant="contained"
+              component={Link}
+              to="/appointment"
+              data-aos="zoom-in"
+              sx={{
+                backgroundColor: "#D4AF37",
+                color: "black",
+                borderRadius: "30px",
+                px: { xs: 3, sm: 4 },
+                py: { xs: 1, sm: 1.5 },
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
+                fontWeight: "bold",
+                textTransform: "none",
+                alignSelf: { xs: "center", md: "flex-start" },
+                "&:hover": { backgroundColor: "#c5a028" },
+              }}
+            >
+              Book Your Appointment →
+            </Button>
+</Box>
 
           {/* Social Icons */}
          

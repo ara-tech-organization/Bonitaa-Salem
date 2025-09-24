@@ -30,9 +30,9 @@ const Work = () => {
     <Box>
       {/* Top Heading - We Work */}
       <Box sx={{ py: 4, textAlign: "center"  }}>
-        <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-          <span style={{ color: "#FFD700" }}>We </span>
-          <span style={{ color: "#000" }}>Work</span>
+        <Typography variant="h3" sx={{ fontWeight: "bold" }}data-aos="fade-up">
+          <span style={{ color: "#FFD700" }}data-aos="fade-up">We </span>
+          <span style={{ color: "#000" }}data-aos="fade-up">Work</span>
         </Typography>
       </Box>
 
@@ -43,7 +43,7 @@ const Work = () => {
           
           px: { xs: 2, md: 6, lg: 10 },
           
-        }}
+        }}data-aos="fade-up"
       >
         {/* Heading */}
         <Box
@@ -53,7 +53,7 @@ const Work = () => {
             textAlign: "center",
             mb: 6,
             mt: -6,
-          }}
+          }}data-aos="fade-up"
         >
           <Typography
             variant="h4"
@@ -61,7 +61,7 @@ const Work = () => {
               fontWeight: "bold",
               maxWidth: "700px",
               
-            }}
+            }}data-aos="fade-up"
           >
             <span style={{ color: "#000000" }}>From Consultation to Results – </span>
             <span style={{ color: "#000000ff" }}>Skin</span>
@@ -73,7 +73,7 @@ const Work = () => {
 
         <Grid container spacing={4} alignItems="center" data-aos="fade-down">
           {/* Left Side - Image */}
-        <Grid size={{xs:12,md:6}}>
+        <Grid size={{xs:12,md:6}}data-aos="fade-up">
             <Box
               component="img"
               src={img1}
@@ -82,7 +82,7 @@ const Work = () => {
                 width: "100%",
                 borderRadius: 2,
                 boxShadow: "#FFD700",
-              }}
+              }}data-aos="fade-up"
             />
           </Grid>
 
@@ -111,7 +111,7 @@ const Work = () => {
                     position: "relative",
                     mb: 9,
                     pl: 9,
-                  }}
+                  }}data-aos="fade-up"
                 >
              {/* Circle Point */}
 <Box
@@ -129,7 +129,7 @@ const Work = () => {
     justifyContent: "center",
     boxShadow: "0px 3px 8px rgba(0,0,0,0.3)",
     
-  }}
+  }}data-aos="fade-up"
 >
   {/* Icon red color */}
   {React.cloneElement(step.icon, { sx: { color: "#FFD700", fontSize: 28 } })}
