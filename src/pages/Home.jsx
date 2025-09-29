@@ -18,27 +18,39 @@ function Home() {
         <title>Bonitaa - Premium Skin & Hair Care Clinic in Salem</title>
         <meta
           name="description"
-          content="Bonitaa Skin & Hair Care Clinic in Salem offers advanced treatments for healthy glowing skin and strong hair. Trusted by hundreds of happy clients."
+          content="Book your consultation today and step into a world of healthy hair and glowing skin with Bonitaa’s expert care. 🌿✨"
         />
         <meta
           name="keywords"
           content="Bonitaa Salem, skin care clinic, hair care, PRP treatment, beauty clinic, Salem"
         />
-        <meta property="og:title" content="Bonitaa - Premium Skin & Hair Care Clinic" />
+        <meta
+          property="og:title"
+          content="Bonitaa - Premium Skin & Hair Care Clinic"
+        />
         <meta
           property="og:description"
-          content="Discover advanced skin and hair treatments at Bonitaa Clinic, Salem. Book your consultation today."
+          content="Book your consultation today and step into a world of healthy hair and glowing skin with Bonitaa’s expert care. 🌿✨"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yourwebsite.com/" />
-        <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+        <meta
+          property="og:image"
+          content="https://yourwebsite.com/og-image.jpg"
+        />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bonitaa - Premium Skin & Hair Care Clinic" />
+        <meta
+          name="twitter:title"
+          content="Bonitaa - Premium Skin & Hair Care Clinic"
+        />
         <meta
           name="twitter:description"
-          content="Glowing skin, strong hair, and expert treatments at Bonitaa Clinic in Salem."
+          content="Book your consultation today and step into a world of healthy hair and glowing skin with Bonitaa’s expert care. 🌿✨"
         />
-        <meta name="twitter:image" content="https://yourwebsite.com/twitter-image.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://yourwebsite.com/twitter-image.jpg"
+        />
       </Helmet>
 
       {/* ✅ Page Content */}

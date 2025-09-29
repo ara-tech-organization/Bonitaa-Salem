@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode >
     {/* process.env.PUBLIC_URL ensures correct basename from package.json homepage */}
-    <BrowserRouter basename="/Bonitaa-salem">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </React.StrictMode>
